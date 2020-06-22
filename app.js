@@ -12,6 +12,9 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 var test = require('./routes/test.js')(app)
 app.use('/api/test', test)
 
+var testcase = require('./routes/testcase.js')(app)
+app.use('/api/testcase', testcase)
+
 var server = app.listen(3001, function () {
     console.log("Express server has started on port " + port)
 });
